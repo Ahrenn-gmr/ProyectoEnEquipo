@@ -121,7 +121,7 @@ namespace Programa_Proyecto
 			// btnRegresar
 			// 
 			this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegresar.Location = new System.Drawing.Point(473, 425);
+			this.btnRegresar.Location = new System.Drawing.Point(473, 438);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(129, 31);
 			this.btnRegresar.TabIndex = 7;
