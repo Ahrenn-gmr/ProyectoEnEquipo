@@ -28,5 +28,36 @@ namespace Programa_Proyecto
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void BtnRegresarClick(object sender, EventArgs e)
+		{
+			Form1 r = new Form1();
+			r.Show();
+			this.Close();
+		}
+		
+		void BtnLimpiarClick(object sender, EventArgs e)
+		{
+			txtPalabra.Text = " ";
+			txtResultado.Text = " ";
+		}
+		
+		void BtnInversaClick(object sender, EventArgs e)
+		{
+			string textoOriginal = txtPalabra.Text;
+			
+			// Verifica que no este vacio
+			if (string.IsNullOrEmpty(textoOriginal)){
+				MessageBox.Show("Por favor, ingresa una palabra.", "Aviso.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
+			}
+			
+			char[] caracteres = textoOriginal.ToCharArray(); // Convierte la cadena de texto en lista individual
+			Array.Reverse(caracteres); // Cambia el orden
+			string textoInvertido = new string(caracteres); // Vuelve a unir los caracteres
+			
+			// Mostrar resultado
+			txtResultado.Text = textoInvertido;
+		}
 	}
 }
