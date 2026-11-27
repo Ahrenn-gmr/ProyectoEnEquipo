@@ -37,25 +37,25 @@ namespace Programa_Proyecto
 		private void InitializeComponent()
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.btnRegrasar = new System.Windows.Forms.Button();
+			this.btnLimpiar = new System.Windows.Forms.Button();
+			this.txtResultado = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
+			this.txtPalabra = new System.Windows.Forms.TextBox();
+			this.btnInvertir = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.button3);
-			this.panel1.Controls.Add(this.button2);
-			this.panel1.Controls.Add(this.textBox2);
+			this.panel1.Controls.Add(this.btnRegrasar);
+			this.panel1.Controls.Add(this.btnLimpiar);
+			this.panel1.Controls.Add(this.txtResultado);
 			this.panel1.Controls.Add(this.label3);
-			this.panel1.Controls.Add(this.textBox1);
-			this.panel1.Controls.Add(this.button1);
+			this.panel1.Controls.Add(this.txtPalabra);
+			this.panel1.Controls.Add(this.btnInvertir);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Location = new System.Drawing.Point(152, 13);
@@ -63,44 +63,35 @@ namespace Programa_Proyecto
 			this.panel1.Size = new System.Drawing.Size(558, 534);
 			this.panel1.TabIndex = 0;
 			// 
-			// label1
+			// btnRegrasar
 			// 
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.White;
-			this.label1.Location = new System.Drawing.Point(16, 27);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(522, 51);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Palabra en reversa";
+			this.btnRegrasar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRegrasar.Location = new System.Drawing.Point(423, 474);
+			this.btnRegrasar.Name = "btnRegrasar";
+			this.btnRegrasar.Size = new System.Drawing.Size(115, 33);
+			this.btnRegrasar.TabIndex = 7;
+			this.btnRegrasar.Text = "Regresar";
+			this.btnRegrasar.UseVisualStyleBackColor = true;
+			this.btnRegrasar.Click += new System.EventHandler(this.BtnRegrasarClick);
 			// 
-			// label2
+			// btnLimpiar
 			// 
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(16, 103);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(522, 51);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Ingresa la palabra:";
+			this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLimpiar.Location = new System.Drawing.Point(423, 417);
+			this.btnLimpiar.Name = "btnLimpiar";
+			this.btnLimpiar.Size = new System.Drawing.Size(115, 33);
+			this.btnLimpiar.TabIndex = 6;
+			this.btnLimpiar.Text = "Limpiar";
+			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
-			// button1
+			// txtResultado
 			// 
-			this.button1.BackColor = System.Drawing.Color.Green;
-			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(16, 226);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(522, 37);
-			this.button1.TabIndex = 2;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(16, 157);
-			this.textBox1.Multiline = true;
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(522, 45);
-			this.textBox1.TabIndex = 3;
+			this.txtResultado.Location = new System.Drawing.Point(16, 341);
+			this.txtResultado.Multiline = true;
+			this.txtResultado.Name = "txtResultado";
+			this.txtResultado.Size = new System.Drawing.Size(522, 45);
+			this.txtResultado.TabIndex = 5;
 			// 
 			// label3
 			// 
@@ -112,33 +103,45 @@ namespace Programa_Proyecto
 			this.label3.TabIndex = 4;
 			this.label3.Text = "Palabra:";
 			// 
-			// textBox2
+			// txtPalabra
 			// 
-			this.textBox2.Location = new System.Drawing.Point(16, 341);
-			this.textBox2.Multiline = true;
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(522, 45);
-			this.textBox2.TabIndex = 5;
+			this.txtPalabra.Location = new System.Drawing.Point(16, 157);
+			this.txtPalabra.Multiline = true;
+			this.txtPalabra.Name = "txtPalabra";
+			this.txtPalabra.Size = new System.Drawing.Size(522, 45);
+			this.txtPalabra.TabIndex = 3;
 			// 
-			// button2
+			// btnInvertir
 			// 
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(423, 406);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(115, 33);
-			this.button2.TabIndex = 6;
-			this.button2.Text = "button2";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnInvertir.BackColor = System.Drawing.Color.Green;
+			this.btnInvertir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnInvertir.Location = new System.Drawing.Point(16, 226);
+			this.btnInvertir.Name = "btnInvertir";
+			this.btnInvertir.Size = new System.Drawing.Size(522, 37);
+			this.btnInvertir.TabIndex = 2;
+			this.btnInvertir.Text = "Invertir";
+			this.btnInvertir.UseVisualStyleBackColor = false;
+			this.btnInvertir.Click += new System.EventHandler(this.BtnInvertirClick);
 			// 
-			// button3
+			// label2
 			// 
-			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(423, 462);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(115, 33);
-			this.button3.TabIndex = 7;
-			this.button3.Text = "button3";
-			this.button3.UseVisualStyleBackColor = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(16, 103);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(522, 51);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Ingresa la palabra:";
+			// 
+			// label1
+			// 
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.Location = new System.Drawing.Point(16, 27);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(522, 51);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Palabra en reversa";
 			// 
 			// Form4
 			// 
@@ -155,12 +158,12 @@ namespace Programa_Proyecto
 		}
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Button btnInvertir;
+		private System.Windows.Forms.TextBox txtPalabra;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.TextBox txtResultado;
+		private System.Windows.Forms.Button btnLimpiar;
+		private System.Windows.Forms.Button btnRegrasar;
 		private System.Windows.Forms.Panel panel1;
 	}
 }
